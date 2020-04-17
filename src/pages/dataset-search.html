@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% set title = 'Dataset Search' %}
+{% set page = 'Dataset Search' %}
+
+{% set searchCategory = "dataset" %}
+
+{% block css %}
+    <!-- Dataset Search Stylesheet & Map -->
+    <link rel="stylesheet" href="assets/css/pages/dataset-search.css" />
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <div class="map-search-container">
+
+      <div class="column is-two-thirds content-column">
+
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb" id="searchBreadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Dataset Search</a></li>
+          </ul>
+          <a class="is-small breadcrumb-button-right" id="expand-map">
+            <i class="fa fa-expand"></i> Expand Map
+          </a>
+        </nav>
+
+        <!-- Search, Facets, & Results  -->
+        <div class="field dataset-search">
+          {% include 'components/search/search-bar.html' %} 
+          {% include 'components/search/facets.html' %}
+        </div>
+
+        {% include 'components/search/search-results.html' %}
+        {% include 'components/search/pagination.html' %}
+      </div>
+
+      <!-- Map Column -->
+      <div class="column map-column">
+        {% include 'components/search/search-map.html' %}
+      </div>
+    </div>
+  </main>
+  <!-- Show Map button that gets shown only when map is closed/hidden -->
+  <button class="button is-primary is-hidden" id="show-map"><i class="fa fa-map margin-right-1"></i> Map</button>
+{% endblock %}
+
+
+{% block js %}
+
+  <!-- Leaflet demo map -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+
+  <!-- Esri Leaflet -->
+  <script src="https://unpkg.com/esri-leaflet@2.3.3/dist/esri-leaflet.js"
+  integrity="sha512-cMQ5e58BDuu1pr9BQ/eGRn6HaR6Olh0ofcHFWe5XesdCITVuSBiBZZbhCijBe5ya238f/zMMRYIMIIg1jxv4sQ=="
+  crossorigin=""></script>
+  <script src="assets/js/demo-map.js"></script>
+{% endblock %}

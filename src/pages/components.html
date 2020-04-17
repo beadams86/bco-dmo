@@ -1,0 +1,1077 @@
+{% extends "layout.html" %}
+
+{% set title = 'BCO-DMO Components' %}
+{% set page = 'Components' %}
+
+{% block css %}
+    <!-- Dataset Search Stylesheet -->
+    <link rel="stylesheet" href="assets/css/pages/dataset-search.css" />
+
+    <!-- Demo Stylesheet for Component Library ONLY -->
+    <link rel="stylesheet" href="assets/css/demo/demo-components.css" />
+{% endblock %}
+
+{% block content %}
+  
+  <nav class="breadcrumb margin-bot-0" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html" aria-current="page">Home</a></li>
+      <li class="is-active"><a href="#" aria-current="page">Components</a></li>
+    </ul>
+  </nav>
+  <!-- Hero / Splash Image -->
+  <section class="hero is-primary">          
+      <!-- Breadcrumbs -->
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title is-spaced">BCO-DMO Component Library</strong></h1>
+              <h2 class="subtitle">This resource will provide a visual standard and documentation for the BCO-DMO website UI.</h2>
+              
+              <a href="https://www.figma.com/file/ilTrHgWCB2uo92l5bFNM0j/BCO-DMO-Design-System" target="_blank" class="button is-primary is-inverted is-outlined margin-right-1"><i class="fa fa-external-link margin-right-1"></i> Figma Designs</a>
+              <a href="assets/files/Sitemap.pdf" class="button is-primary is-inverted is-outlined margin-right-1"><i class="fa fa-file-pdf-o margin-right-1"></i> Sitemap</a>
+              <a href="assets/files/personas/personas.zip" class="button is-primary is-inverted is-outlined margin-right-1"><i class="fa fa-download margin-right-1"></i> Personas</a>
+              <a href="assets/files/journey-maps/journey-maps.zip" class="button is-primary is-inverted is-outlined margin-right-1"><i class="fa fa-download margin-right-1"></i> Journey Maps</a>
+              <a href="https://www.dropbox.com/s/7dnsdhnac98rbod/bco-dmo.zip?dl=0" target="_blank" class="button is-primary is-inverted is-outlined margin-right-1"><i class="fa fa-download margin-right-1"></i> HTML Site</a>
+            </div>
+          </div>
+  </section>
+
+  <section class="padded-section">
+      <div class="container">
+        <div class="columns">
+            <div class="column is-one-quarter">
+              {% include 'components/demo/left-menu.html' %}
+            </div>
+
+            <div class="column is-three-quarters">
+
+                {% include 'components/demo/overview.html' %}
+
+                {% include 'components/demo/colors.html' %}
+
+                {% include 'components/demo/typography.html' %}
+                
+                {% include 'components/demo/logo-icons.html' %}
+
+                {% include 'components/demo/layout.html' %}
+                
+                {% include 'components/demo/hero.html' %}
+
+
+                <!-- Buttons -->
+                <section class="padding-bot-5 padding-top-5" id="buttons">
+                  <h3 class="title is-3">Buttons</h3>
+                <p class="margin-bot-1">The button is a versatile and essential element of the website. Check out <a href="https://bulma.io/documentation/elements/button/" target="_blank">Bulma Button Docs</a> for more.</p>
+                
+                <a class="button">Anchor</a>
+                <button class="button">Button</button>
+                <input class="button" type="submit" value="Submit input">
+                <input class="button" type="reset" value="Reset input">
+<figure class="code-snippet is-hidden">
+<xmp><a class="button">Anchor</a>
+<button class="button">Button</button>
+<input class="button" type="submit" value="Submit input">
+<input class="button" type="reset" value="Reset input"></xmp>
+</figure>
+
+                <hr>
+                <h4 class="is-4 subtitle">Colors (<a href="https://bulma.io/documentation/elements/button/#colors" target="_blank">Bulma Docs</a>)</h4>
+                <div class="buttons">
+                  <button class="button">Default</button>
+                  <button class="button is-primary">Primary</button>
+                  <button class="button is-light">Light</button>
+                  <button class="button is-white">White</button>
+                </div>
+<figure class="code-snippet is-hidden">
+<xmp><div class="buttons">
+  <button class="button">Default</button>
+  <button class="button is-primary">Primary</button>
+  <button class="button is-light">Light</button>
+  <button class="button is-white">White</button>
+</div></xmp>
+</figure>
+                <hr>
+                <h4 class="is-4 subtitle">Sizes</h4>
+                <div class="buttons">
+                  <button class="button is-small">Small</button>
+                  <button class="button">Default</button>
+                  <button class="button is-medium">Medium</button>
+                  <button class="button is-large">Large</button>
+                </div>
+<figure class="code-snippet is-hidden">
+<xmp><div class="buttons">
+  <button class="button">Default</button>
+  <button class="button is-primary">Primary</button>
+  <button class="button is-light">Light</button>
+  <button class="button is-white">White</button>
+</div></xmp>
+</figure>
+                <hr>
+                <h4 class="is-4 subtitle">Styles</h4>
+                <button class="button is-outlined">Default Outlined</button>
+                <button class="button is-primary is-outlined">Primary Outlined</button>
+                <button class="button is-primary is-inverted">Inverted</button>
+<figure class="code-snippet is-hidden">
+<xmp><button class="button is-outlined">Default Outlined</button>
+<button class="button is-primary is-outlined">Primary Outlined</button>
+<button class="button is-primary is-inverted">Inverted</button></xmp>
+</figure>
+                <hr>
+                <h4 class="is-4 subtitle">Groups & Icon Add-ons</h4>
+                <div class="field has-addons">
+                  <p class="control">
+                    <button class="button">
+                      <span class="icon is-small">
+                        <i class="fa fa-align-left"></i>
+                      </span>
+                      <span>Left</span>
+                    </button>
+                  </p>
+                  <p class="control">
+                    <button class="button">
+                      <span class="icon is-small">
+                        <i class="fa fa-align-center"></i>
+                      </span>
+                      <span>Center</span>
+                    </button>
+                  </p>
+                  <p class="control">
+                    <button class="button">
+                      <span class="icon is-small">
+                        <i class="fa fa-align-right"></i>
+                      </span>
+                      <span>Right</span>
+                    </button>
+                  </p>
+                </div>
+<figure class="code-snippet is-hidden">
+  <xmp>
+  <div class="field has-addons">
+    <p class="control">
+      <button class="button">
+        <span class="icon is-small">
+          <i class="fa fa-align-left"></i>
+        </span>
+        <span>Left</span>
+      </button>
+    </p>
+    <p class="control">
+      <button class="button">
+        <span class="icon is-small">
+          <i class="fa fa-align-center"></i>
+        </span>
+        <span>Center</span>
+      </button>
+    </p>
+    <p class="control">
+      <button class="button">
+        <span class="icon is-small">
+          <i class="fa fa-align-right"></i>
+        </span>
+        <span>Right</span>
+      </button>
+    </p>
+  </div>
+</xmp>
+</figure>
+<hr>
+<h4 class="is-4 subtitle">Grid Buttons</h4>
+<div class="grid-buttons">
+    <button class="grid-button is-primary">
+      <label>123</label>
+      <i class="fa fa-database"></i>
+      <h4>Grid Button Title</h4>
+    </button>
+    <button class="grid-button is-primary">
+      <label>123</label>
+      <i class="fa fa-database"></i>
+      <h4>Grid Button Title</h4>
+    </button>
+    <button class="grid-button is-primary">
+      <label>123</label>
+      <i class="fa fa-database"></i>
+      <h4>Grid Button Title</h4>
+    </button>
+    <button class="grid-button is-primary">
+      <label>123</label>
+      <i class="fa fa-database"></i>
+      <h4>Grid Button Title</h4>
+    </button>
+  </div>
+<figure class="code-snippet is-hidden">
+<xmp><div class="grid-buttons">
+  <button class="grid-button is-primary">
+    <label>123</label>
+    <i class="fa fa-database"></i>
+    <h4>Grid Button Title</h4>
+  </button>
+  <button class="grid-button is-primary">
+    <label>123</label>
+    <i class="fa fa-database"></i>
+    <h4>Grid Button Title</h4>
+  </button>
+  <button class="grid-button is-primary">
+    <label>123</label>
+    <i class="fa fa-database"></i>
+    <h4>Grid Button Title</h4>
+  </button>
+  <button class="grid-button is-primary">
+    <label>123</label>
+    <i class="fa fa-database"></i>
+    <h4>Grid Button Title</h4>
+  </button>
+</div></xmp>
+</figure>
+</section>
+
+
+<!-- Tags Section -->
+<section class="padding-bot-5" id="tags">
+  <h3 class="title is-3">Tags</h3>
+  <p class="margin-bot-3">Tags are very versatile and a great way to display important information quickly and call attention to it when necessary. Check out all variations in <a href="https://bulma.io/documentation/elements/tag/" target="_blank">Bulma Tags Docs</a>.</p>
+  <span class="tag">Default <strong>Tag</strong></span>
+  <span class="tag is-primary">Primary</span>
+  <span class="tag is-success is-light">Success Light</span>
+  <span class="tag is-warning is-light">Warning Light</span>
+  <span class="tag is-danger is-light">Danger Light</span>
+<figure class="code-snippet is-hidden">
+<xmp><span class="tag">Default <strong>Tag</strong></span>
+<span class="tag is-primary is-light">Primary</span>
+<span class="tag is-success is-light">Success</span>
+<span class="tag is-warning is-light">Warning</span>
+<span class="tag is-danger is-light">Danger</span>
+</xmp>
+</figure>
+<hr>
+<span class="tag has-icons-left">
+  <i class="fa fa-info"></i> Default Icon Left
+</span>
+<span class="tag is-danger is-light has-icons-left">
+  <i class="fa fa-lock"></i> Danger Icon Left
+</span>
+<span class="tag is-success is-light has-icons-right">
+  Success Icon Right <i class="fa fa-check"></i>
+</span>
+<hr>
+<span class="tag is-medium">
+  Medium Size
+</span>
+<span class="tag is-large">
+  Large Size
+</span>
+<hr>
+<div class="tags has-addons">
+  <span class="tag">Version</span>
+  <span class="tag is-primary">1.0</span>
+</div>
+
+<figure class="code-snippet is-hidden">
+<xmp><span class="tag">Default <strong>Tag</strong></span>
+<span class="tag is-primary is-light">Primary</span>
+<span class="tag is-success is-light">Success</span>
+<span class="tag is-warning is-light">Warning</span>
+<span class="tag is-danger is-light">Danger</span>
+</xmp>
+</figure>
+</section>
+
+<!-- Alerts / Notifications -->
+
+<section class="padding-bot-5" id="alerts">
+    <h3 class="title is-3">Alerts & Notifications</h3>
+    <p class="margin-bot-1">Alerts, referred to as <a href="https://bulma.io/documentation/elements/notification/" target="_blank">Notifications in Bulma</a>, are a way to grab the user's attention with important information. </p>
+
+<!-- Default Alert/Notification -->
+<div class="notification">
+  <button class="delete"></button>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.  
+</div>
+<figure class="code-snippet is-hidden margin-bot-1">
+<xmp><div class="notification">
+  <button class="delete"></button>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div></xmp>
+</figure>
+
+<!-- Notifications with Color Background -->
+<div class="notification is-primary">
+  <button class="delete"></button>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div>
+<figure class="code-snippet is-hidden margin-bot-1">
+<xmp><div class="notification is-primary">
+  <button class="delete"></button>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div></xmp>
+</figure>
+
+<div class="notification is-success">
+  <button class="delete"></button>
+  <i class="fa fa-check margin-right-1"></i> 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div>
+<figure class="code-snippet is-hidden margin-bot-1"><xmp><div class="notification is-success">
+  <button class="delete"></button>
+  <i class="fa fa-check margin-right-1"></i> 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div></xmp>
+</figure>
+
+<div class="notification is-warning">
+  <button class="delete"></button>
+  <i class="fa fa-warning margin-right-1"></i> 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.
+</div>
+<figure class="code-snippet is-hidden margin-bot-1"><xmp><div class="notification is-warning">
+  <button class="delete"></button>
+  <i class="fa fa-warning margin-right-1"></i> 
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor.
+</div></xmp>
+</figure>
+
+<div class="notification is-danger">
+  <button class="delete"></button>
+  <i class="fa fa-warning margin-right-1"></i> 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div>
+<figure class="code-snippet is-hidden margin-bot-1"><xmp><div class="notification is-danger">
+  <button class="delete"></button>
+  <i class="fa fa-warning margin-right-1"></i>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+</div></xmp>
+</figure>
+
+</section>
+  <!-- Forms -->
+  <section class="padding-bot-5" id="forms">
+    <h3 class="title is-3">Form Elements</h3>
+    <p class="margin-bot-1">Form elements includes textboxes, select/dropdowns, checkboxes, radios, and any other custom form elements used in the BCO-DMO website. Check out the <a href="https://bulma.io/documentation/form/" target="_blank">Bulma Form Docs</a> for even more detail. </p>
+  
+    <form>
+      <div class="field">
+        <label class="label">Default Textbox</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Placeholder text...">
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Textbox with icon and validation</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input is-success" type="text" placeholder="Enter username" value="john_smith">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fa fa-check"></i>
+          </span>
+        </div>
+        <p class="help is-success">This username is available</p>
+      </div>
+      
+      <div class="field">
+        <label class="label">Dropdown</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Textarea</label>
+        <div class="control">
+          <textarea class="textarea" placeholder="Textarea"></textarea>
+        </div>
+      </div>
+      
+      <div class="field">
+          <label class="checkbox">I agree to the terms & conditions 
+            <input type="checkbox"><span class="checkmark"></span>
+          </label>
+      </div>
+      
+      <div class="field margin-bot-1">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="question" checked>
+            Yes
+          </label>
+          <label class="radio">
+            <input type="radio" name="question">
+            No
+          </label>
+        </div>
+      </div>
+    </form>
+    <figure class="code-snippet is-hidden">
+    <xmp>
+<form>
+  <div class="field">
+    <label class="label">Default Textbox</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Placeholder text...">
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">Textbox with icon and validation</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-success" type="text" placeholder="Enter username" value="john_smith">
+      <span class="icon is-small is-left">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="icon is-small is-right">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+    <p class="help is-success">This username is available</p>
+  </div>
+  
+  <div class="field">
+    <label class="label">Dropdown</label>
+    <div class="control">
+      <div class="select">
+        <select>
+          <option>Select dropdown</option>
+          <option>With options</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+  <div class="field">
+    <label class="label">Textarea</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Textarea"></textarea>
+    </div>
+  </div>
+  
+  <div class="field">
+      <label class="checkbox">I agree to the terms & conditions 
+        <input type="checkbox"><span class="checkmark"></span>
+      </label>
+  </div>
+  
+  <div class="field margin-bot-1">
+    <div class="control">
+      <label class="radio">
+        <input type="radio" name="question" checked>
+        Yes
+      </label>
+      <label class="radio">
+        <input type="radio" name="question">
+        No
+      </label>
+    </div>
+  </div>
+</form>
+    </xmp>
+    </figure>
+
+    <hr>
+    <h4 class="is-4 subtitle">Custom Search Elements</h4>
+    <!-- Dataset Search Box -->
+    <div class="control has-icons-right has-dropdown-left margin-bot-1">
+      <input class="input" type="email" placeholder="Search Keywords, Authors, DOI, ORCID..." />
+      <div class="is-left">
+        <div class="select">
+          <select name="search-category" id="search-category">
+            <option>All</option>
+            <option selected>Datasets</option>
+            <option>Deployments</option>
+            <option>Projects</option>
+          </select>
+        </div>
+      </div>
+      <span class="icon is-small is-right">
+        <i class="fa fa-search"></i>
+      </span>
+    </div>
+<figure class="code-snippet is-hidden margin-bot-3">
+<xmp><div class="control has-icons-right has-dropdown-left margin-bot-1">
+  <input class="input" type="email" placeholder="Search Keywords, Authors, DOI, ORCID..." />
+  <div class="is-left">
+    <div class="select">
+      <select name="search-category" id="search-category">
+        <option>All</option>
+        <option selected>Datasets</option>
+        <option>Deployments</option>
+        <option>Projects</option>
+      </select>
+    </div>
+  </div>
+  <span class="icon is-small is-right">
+    <i class="fa fa-search"></i>
+  </span>
+</div></xmp>
+</figure>
+
+    <!-- Single Dropdown Menu Item for Facets-->
+    <div class="dropdown" id="demo-dropdown">
+        <div class="dropdown-trigger">
+          <button class="button is-light search-facet" aria-haspopup="true" aria-controls="demo-dropdown">
+            <span>Facet Dropdown</span>
+            <span class="icon">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <label class="checkbox">Single Facet Value<input type="checkbox"><span class="checkmark"></span></label>
+            </div>
+            <div class="dropdown-item">
+              <label class="checkbox">Another Single Facet Value<input type="checkbox"><span class="checkmark"></span></label>
+            </div>
+            <div class="dropdown-item">
+              <label class="checkbox">Another Value<input type="checkbox"><span class="checkmark"></span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+<figure class="code-snippet is-hidden margin-bot-3">
+<xmp><div class="dropdown" id="demo-dropdown">
+  <div class="dropdown-trigger">
+    <button class="button is-light search-facet" aria-haspopup="true" aria-controls="demo-dropdown">
+      <span>Facet Dropdown</span>
+      <span class="icon">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <div class="dropdown-item">
+        <label class="checkbox">Single Facet Value<input type="checkbox"><span class="checkmark"></span></label>
+      </div>
+      <div class="dropdown-item">
+        <label class="checkbox">Another Single Facet Value<input type="checkbox"><span class="checkmark"></span></label>
+      </div>
+      <div class="dropdown-item">
+        <label class="checkbox">Another Value<input type="checkbox"><span class="checkmark"></span></label>
+      </div>
+    </div>
+  </div>
+</div></xmp>
+</figure>
+      <hr>
+      <!-- Default Search bar -->
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" placeholder="Find a repository">
+        </div>
+        <div class="control">
+          <a class="button is-primary">
+            Search
+          </a>
+        </div>
+      </div>
+<figure class="code-snippet is-hidden margin-bot-3">
+<xmp><div class="field has-addons">
+  <div class="control">
+    <input class="input" type="text" placeholder="Find a repository">
+  </div>
+  <div class="control">
+    <a class="button is-primary">
+      Search
+    </a>
+  </div>
+</div></xmp></figure>
+      <hr>
+      <!-- Demo File Upload-->
+      <div id="file-js-example" class="file has-name">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fa fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Choose a file…
+            </span>
+          </span>
+          <span class="file-name">
+            No file uploaded
+          </span>
+        </label>
+      </div>
+      <button class="button is-primary margin-top-1" id="submit-btn" disabled>Submit</button>
+        <script>
+          const fileInput = document.querySelector('#file-js-example input[type=file]');
+          fileInput.onchange = () => {
+            if (fileInput.files.length > 0) {
+              const fileName = document.querySelector('#file-js-example .file-name');
+              fileName.textContent = fileInput.files[0].name;
+              document.getElementById('submit-btn').disabled = false;
+            }
+          }
+        </script>
+        <!-- End Demo File Upload -->
+<figure class="code-snippet is-hidden margin-bot-3 margin-top-1">
+<h5 class="is-5 color-accent-light">HTML</h5>
+<xmp><div id="file-js-example" class="file has-name">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fa fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span class="file-name">
+      No file uploaded
+    </span>
+  </label>
+</div>
+<button class="button is-primary margin-top-1" id="submit-btn" disabled>Submit</button></xmp>
+<h5 class="is-5">JavaScript to Disable Submit until file uploaded</h5>
+<pre><xmp>
+const fileInput = document.querySelector('#file-js-example input[type=file]');
+
+fileInput.onchange = () => {
+  if (fileInput.files.length > 0) {
+    const fileName = document.querySelector('#file-js-example .file-name');
+    fileName.textContent = fileInput.files[0].name;
+    document.getElementById('submit-btn').disabled = false;
+  }
+}</xmp></pre>
+</figure>
+
+</section>
+
+    <!-- Navigation -->
+  <section class="padding-bot-5" id="navigation">
+      <h3 class="title is-3">Navigation</h3>
+      <p class="margin-bot-1">Navigation items includes <a href="https://bulma.io/documentation/components/navbar/" target="_blank">navbars</a>, <a href="https://bulma.io/documentation/components/tabs/" target="_blank">tabs</a>, <a href="https://bulma.io/documentation/components/breadcrumb/" target="_blank">breadcrumbs</a>, and other similar components used to control site navigation.</p>
+  
+    <!-- Navbar Component -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="assets/img/BCO-DMO-LogoNew.svg" alt="BCO-DMO Logo" />
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-end">
+          <!-- Regular Navbar Link -->
+          <a class="navbar-item">Default Link</a>
+          
+          <!-- Dropdown Navbar Item -->
+          <div class="navbar-item has-dropdown" id="AccessDataDropdown">
+              <a class="navbar-link">Dropdown Menu</a>
+              <!-- Custom Dropdown Menu -->
+              <div class="navbar-dropdown">
+                <div class="navbar-dropdown-content">
+                  <div class="navbar-dropdown-wrap">
+                    <div class="navbar-dropdown-label"><strong><i class="fa fa-database"></i></strong><span>Dropdown Label</span></div>
+                    <ul class="menu-list">
+                      <li class="is-primary"><a href="dataset-search.html"><i class="fa fa-search margin-right-1"></i> Dataset Search</a></li>
+                      <li><a><i class="fa fa-database margin-right-1"></i> Browse all Data</a></li>
+                      <li>
+                        <div class="nested dropdown is-hoverable">
+                          <div class="dropdown-trigger" aria-haspopup="true" aria-controls="dropdown-menu">
+                              <a>Access Data Help <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                          </div>
+                          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                              <a class="dropdown-item">How to Access Data</a>
+                              <a class="dropdown-item">What is a Data Package?</a>
+                              <a class="dropdown-item">Data FAQ's</a>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li><a>BCO-DMO API</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+<figure class="code-snippet is-hidden margin-bot-3">
+<xmp><nav class="navbar" role="navigation" aria-label="main navigation">
+<div class="navbar-brand">
+  <a class="navbar-item" href="index.html">
+    <img src="assets/img/BCO-DMO-LogoNew.svg" alt="BCO-DMO Logo" />
+  </a>
+
+  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+</div>
+
+<div id="navbar" class="navbar-menu">
+  <div class="navbar-end">
+    <!-- Regular Navbar Link -->
+    <a class="navbar-item">Default Link</a>
+    <!-- Dropdown Menu Navbar Link -->
+    <div class="navbar-item has-dropdown" id="AccessDataDropdown">
+        <a class="navbar-link">Dropdown Menu</a>
+        <!-- Custom Dropdown Menu -->
+        <div class="navbar-dropdown">
+          <div class="navbar-dropdown-content">
+            <div class="navbar-dropdown-wrap">
+              <div class="navbar-dropdown-label"><strong><i class="fa fa-database"></i></strong><span>Dropdown Label</span></div>
+              <ul class="menu-list">
+                <li class="is-primary"><a href="dataset-search.html"><i class="fa fa-search margin-right-1"></i> Dataset Search</a></li>
+                <li><a><i class="fa fa-database margin-right-1"></i> Browse all Data</a></li>
+                <li>
+                  <div class="nested dropdown is-hoverable">
+                    <div class="dropdown-trigger" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <a>Access Data Help <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a class="dropdown-item">How to Access Data</a>
+                        <a class="dropdown-item">What is a Data Package?</a>
+                        <a class="dropdown-item">Data FAQ's</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li><a>BCO-DMO API</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></xmp>
+</figure>
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Another Parent</a></li>
+          <li class="is-active"><a href="#" aria-current="page">Active Page</a></li>
+        </ul>
+      </nav>
+<figure class="code-snippet is-hidden margin-bot-3">
+<xmp><nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Another Parent</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Active Page</a></li>
+  </ul>
+</nav>
+</xmp>
+</figure>
+      <hr>
+      <h4 class="subtitle is-4">Tabs (<a href="https://bulma.io/documentation/components/tabs/" target="_blank">Bulma Docs</a>)</h4>
+      <!-- Tabs Component -->
+      <div class="tabs margin-top-3">
+        <ul>
+          <li class="is-active"><a>Active Tab</a></li>
+          <li><a>Tab Title</a></li>
+          <li><a>Tab Title</a></li>
+          <li><a>Tab Title</a></li>
+        </ul>
+      </div>
+<figure class="code-snippet is-hidden margin-bot-3">
+<xmp><div class="tabs">
+  <ul>
+    <li class="is-active"><a>Active Tab</a></li>
+    <li><a>Tab Title</a></li>
+    <li><a>Tab Title</a></li>
+    <li><a>Tab Title</a></li>
+  </ul>
+</div>
+</xmp>
+</figure>
+
+      <h4 class="subtitle is-4 margin-top-3">Alignment of Tabs</h4>
+      <code>.is-centered</code>
+      <div class="tabs is-centered">
+        <ul>
+          <li class="is-active"><a>Active Tab</a></li>
+          <li><a>Tab Title</a></li>
+          <li><a>Tab Title</a></li>
+          <li><a>Tab Title</a></li>
+        </ul>
+      </div>
+
+        <code>.is-right</code>
+        <div class="tabs is-right">
+          <ul>
+            <li class="is-active"><a>Active Tab</a></li>
+            <li><a>Tab Title</a></li>
+            <li><a>Tab Title</a></li>
+            <li><a>Tab Title</a></li>
+          </ul>
+        </div>  
+      </section>
+
+      <!-- Cards -->
+      <section class="padding-bot-5 padding-top-5" id="cards">
+        <h3 class="title is-3">Cards</h3>
+        <!-- Default Cards -->
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h3 class="title">Default Card Title</h3>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-48x48">
+                      <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <p class="title is-4">BCO-DMO</p>
+                    <p class="subtitle is-6">@bcodmo</p>
+                  </div>
+                </div>
+            
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus nec iaculis mauris. <a>@nsf</a>.
+                  <a href="#">#hashtag</a>
+                  <br>
+                  <time datetime="2016-1-1">11:15 AM - 3 Jan 2020</time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<figure class="code-snippet is-hidden">
+<xmp><div class="columns">
+    <div class="column is-one-third">
+      <!-- Default Card Component -->
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <h3 class="title">Default Card Title</h3>
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <!-- Twitter Card Variation -->
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">BCO-DMO</p>
+              <p class="subtitle is-6">@bcodmo</p>
+            </div>
+          </div>
+      
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris. <a>@nsf</a>.
+            <a href="#">#hashtag</a>
+            <br>
+            <time datetime="2016-1-1">11:15 AM - 3 Jan 2020</time>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</xmp></figure>
+        <h4 class="subtitle is-4 margin-top-3">Search Results Card</h4>
+        <div class="card result-card">
+          <div class="card-status"><span class="tag is-danger is-light"><i class="fa fa-lock"></i> Restricted</span></div>
+          <div class="card-content">
+            <div class="content">
+              <label class="pre-title">DATASET</label>
+              <a class="title">Fluorescence spectra for 3 strains of Synechococcus while increasing temperatures to detect the photosystem components disassociation temperature</a>
+              <p><a>David A. Hutchins </a></p>
+            </div>
+            <div class="columns card-details">
+              <div class="column"><a href="#">Dimensions: Collaborative Research: Genetic, functional and phylogenetic diversity determines marine...</a></div>
+              <div class="column has-text-right"><span class="tag"><a>Temperature</a></span> <span class="tag"><a>Something</a></span> <span class="tag"><a>C02</a></span></div>
+            </div>
+          </div>
+        </div>
+<figure class="code-snippet is-hidden">
+<xmp><div class="card result-card">
+  <div class="card-status"><span class="tag is-danger is-light"><i class="fa fa-lock"></i> Restricted</span></div>
+  <div class="card-content">
+    <div class="content">
+      <label class="pre-title">DATASET</label>
+      <a class="title">Fluorescence spectra for 3 strains of Synechococcus while increasing temperatures to detect the photosystem components disassociation temperature</a>
+      <p><a>David A. Hutchins </a></p>
+    </div>
+    <div class="columns card-details">
+      <div class="column"><a href="#">Dimensions: Collaborative Research: Genetic, functional and phylogenetic diversity determines marine...</a></div>
+      <div class="column has-text-right"><span class="tag"><a>Temperature</a></span> <span class="tag"><a>Something</a></span> <span class="tag"><a>C02</a></span></div>
+    </div>
+  </div>
+</div>
+</xmp>
+</figure>
+      </section>
+
+      <!-- Tables -->
+      <section class="padding-bot-5 padding-top-5" id="table">
+        <h3 class="title is-3">Table</h3>
+        <p class="margin-bot-3">For more documentation, check out Bulma's <a href="https://bulma.io/documentation/elements/table/" target="_blank">Table Docs</a></p>
+      
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th><abbr title="Version">Ver.</abbr></th>
+            <th>Table Header</th>
+            <th>Another Table Header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1.0</th>
+            <td><a>Lorem Ipsum</a></td>
+            <td>Dolor Sit</td>
+          </tr>
+          <tr class="is-selected">
+            <th>2.0</th>
+            <td><a>Selected Row Link</a></td>
+            <td>Selected Row</td>
+          </tr>
+          <tr>
+            <th>3.0</th>
+            <td><a>Phasellus Nec</a></td>
+            <td>Iaculis Mauris</td>
+          </tr>
+        </tbody>
+      </table>
+
+<figure class="code-snippet is-hidden">
+<xmp><table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th><abbr title="Version">Ver.</abbr></th>
+      <th>Table Header</th>
+      <th>Another Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1.0</th>
+      <td><a>Lorem Ipsum</a></td>
+      <td>Dolor Sit</td>
+    </tr>
+    <tr class="is-selected">
+      <th>2.0</th>
+      <td><a>Selected Row Link</a></td>
+      <td>Selected Row</td>
+    </tr>
+    <tr>
+      <th>3.0</th>
+      <td><a>Phasellus Nec</a></td>
+      <td>Iaculis Mauris</td>
+    </tr>
+  </tbody>
+</table>
+</xmp>
+</figure>
+      </section>
+      <!-- Footer Section -->
+      <section class="padding-top-5 padding-bot-5" id="footer">
+        <h3 class="title is-3">Footer</h3>
+        <footer class="footer">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h4>Section Title</h4>
+                <ul>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Section Title</h4>
+                <ul>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h4>Section Title</h4>
+                <ul>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                  <li><a>Footer Link</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      
+        </footer>
+        <div class="footer-bar">
+            <div class="container">
+              <div class="columns">
+                <div class="column">
+                  <img src="assets/img/NSF-White.png" style="width:60px;" />
+                  <span>©2020 Biological and Chemical Oceanography Data Management Office.<br/>
+      Funded by the U.S. National Science Foundation</span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+    </div>
+    </div>
+  </div>
+</section>
+
+<button id="scrollTop" class="button"><i class="fa fa-chevron-up"></i></button>
+
+{% endblock content %}
+
+{% block js %}
+<script src="assets/js/demo/demo-components.js"></script>
+{% endblock %}
+
+{% set footer = false %}

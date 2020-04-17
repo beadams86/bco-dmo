@@ -1,0 +1,39 @@
+
+{% from "macros/showcase-column.html" import showcase %}
+
+<!-- 3 wide grid to Showcase Resources -->
+  <section class="padded-section margin-top-3">
+    <div class="container">
+      <div class="columns">
+        {{ showcase
+          (
+            "How do I access Data?", 
+            "A tutorial showing how to effectively access BCO-DMO data. Available online and for download.", 
+            "question",
+            "Learn More",
+            "#"
+          ) 
+        }}
+          
+        {{ showcase
+          (
+            "Data Mgmt Best Practices", 
+            "A tutorial showing how to effectively access BCO-DMO data. Available online and for download.", 
+            "info",
+            "Learn More",
+            "#"
+          ) 
+        }}
+
+        {{ showcase
+          (
+            "NSF OCE Sample and Data Policy", 
+            "A tutorial showing how to effectively access BCO-DMO data. Available online and for download.", 
+            "file-text",
+            "Learn More",
+            "#"
+          ) 
+        }}
+    </div>
+  </div>
+</section>

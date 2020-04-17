@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% set title = 'BCO-DMO Frequently Asked Questions (FAQ)' %}
+{% set page = 'FAQ' %}
+
+{% from "macros/breadcrumbs.html" import breadcrumb %}
+
+{% block content %}
+  
+    <!-- Breadcrumbs -->
+    {{ breadcrumb("Frequently Asked Questions") }}
+
+    <div class="container margin-top-3 margin-bot-3">
+        <h1 class="title is-1">Frequently Asked Questions (FAQ)</h1>
+        {% include 'components/accordion.html' %}
+    </div>
+
+    {% include 'components/contact-callout.html' %}
+
+{% endblock content %}
+
+{% set footer = true %}
